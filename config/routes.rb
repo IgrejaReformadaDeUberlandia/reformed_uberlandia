@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   namespace :site do
-    get 'about/index'
     get 'home/index'
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,4 +10,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "site/home#index"
+
+  get '/about', to: 'site/about#index' 
+  get '/about', to: 'site/about#index' 
 end
