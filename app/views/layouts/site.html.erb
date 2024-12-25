@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReformedUberlandia</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header class="bg-sky-900 text-white py-5">
+      <nav class="container mx-auto flex justify-between items-center">
+        <a href="/" class="font-bold text-xl">
+          <div> Igreja Presbiteriana</div> <div class="text-gray-400"> Reformada de Uberlandia </div></a>
+        <ul class="flex space
+        -x-5">
+          <li class="mx-2"><a href="/about">About</a></li>
+          <li class="mx-2"><a href="/contact">Contact</a></li> 
+          <li class="mx-2"><a href="/contact">Sermões</a></li> 
+          <li class="mx-2"><a href="/contact">Artigos de Fé</a></li> 
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="container mx-auto mt-28 px-5 flex h-[65vh]">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-gray-400 text-white py-5 text-center h-[20vh]">
+      <div class="container mx-auto">
+        <p>&copy; 2021 ReformedUberlandia</p>
+      </div>
+  </body>
+</html>
