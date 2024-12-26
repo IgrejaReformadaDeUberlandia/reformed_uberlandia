@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :site do
+    get 'credo/index'
     get 'contact/index'
     get 'home/index'
   end
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
 
   get '/about', to: 'site/about#index' 
   get '/contact', to: 'site/contact#index' 
+  get '/credo', to: 'site/credo#index' 
 end
