@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReformedUberlandia</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div>
+      <header class="bg-yellow-900 text-white p-4">
+        <h1 class="text-lg font-bold"> Painel Administrativo IPRU </h1>
+      </header>
+    </div>
+    <div class="flex min-h-screen">
+      <nav class="bg-gray-500 text-white p-4 w-[15vw]">
+        <ul class="">
+          <li>
+            <%= link_to "Home", root_path %>
+          </li>
+          <li>
+            <%= link_to "Bulletins", admin_dashboard_bulletins_path %>
+          </li>
+        </ul>
+      </nav>
+      <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>

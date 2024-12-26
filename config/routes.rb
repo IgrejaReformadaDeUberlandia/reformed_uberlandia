@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin_dashboard do
+    get 'bulletins', to: 'bulletins#index'
+  end
   namespace :site do
     get 'credo/index'
     get 'contact/index'
