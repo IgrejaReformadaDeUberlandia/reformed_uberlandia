@@ -12,10 +12,12 @@
   </head>
 
   <body>
-    <header class="bg-sky-900 text-white py-5">
+    <header class="bg-sky-900 text-white p-4">
       <nav class="container mx-auto flex justify-between items-center">
         <a href="/" class="font-bold text-xl">
-          <div> Igreja Presbiteriana</div> <div class="text-gray-400"> Reformada de Uberlandia </div></a>
+          <div class="lg:hidden"> IPRU </div>
+          <div class="hidden lg:block"> Igreja Presbiteriana</div> <div class="text-gray-400 hidden lg:block"> Reformada de Uberlandia </div>
+        </a>
         <ul class="flex space
         -x-5">
           <li class="mx-2"><a href="/about">About</a></li>
@@ -25,7 +27,7 @@
       </nav>
     </header>
     
-    <main class="container mx-auto mt-28 px-5 flex h-[65vh]">
+    <main class="container mx-auto mt-6 md:mt-24 flex min-h-[70vh]">
       <%= yield %>
     </main>
 
