@@ -12,14 +12,16 @@
   </head>
 
   <body>
-    <header class="bg-sky-900 text-white p-4">
-      <nav class="container mx-auto flex justify-between items-center">
-        <a href="/" class="font-bold text-xl">
-          <div class="lg:hidden"> IPRU </div>
-          <div class="hidden lg:block"> Igreja Presbiteriana</div> <div class="text-gray-400 hidden lg:block"> Reformada de Uberlandia </div>
-        </a>
-        <ul class="flex space
-        -x-5">
+    <header  data-controller="sticky" class="text-primary">
+      <nav id="menubar" 
+           class="px-6 bg-white mx-auto flex justify-between items-center"
+           data-sticky-target="menu">
+
+        <%= link_to root_path, class:"contents" do %>
+          <%= image_tag 'logo-secundaria-sem-fundo.png', alt: 'IPRU Logo', class: 'w-1/5' %>
+        <% end %>
+
+        <ul class="font-bold flex space-x-6">
           <li class="mx-2"><a href="/about">About</a></li>
           <li class="mx-2"><a href="/contact">Contact</a></li> 
           <li class="mx-2"><a href="/credo">Artigos de Fé</a></li> 
@@ -31,9 +33,9 @@
       <%= yield %>
     </main>
 
-    <footer class="bg-gray-400 text-white py-5 text-center h-[20vh]">
+    <footer class="bg-primary text-white py-5 text-center h-[15vh]">
       <div class="container mx-auto">
-        <p>&copy; 2021 ReformedUberlandia</p>
+        <p>&copy; 2025 Reformed Presbyterian Church of Uberlandia</p>
       </div>
   </body>
 </html>
