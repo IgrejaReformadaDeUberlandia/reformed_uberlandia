@@ -12,28 +12,12 @@
   </head>
 
   <body>
-    <header  data-controller="sticky" class="text-primary">
-      <nav id="menubar" 
-           class="px-6 bg-white mx-auto flex justify-between items-center"
-           data-sticky-target="menu">
-
-        <%= link_to root_path, class:"contents" do %>
-          <%= image_tag 'logo-secundaria-sem-fundo.png', alt: 'IPRU Logo', class: 'w-1/5' %>
-        <% end %>
-
-        <ul class="font-bold flex space-x-6">
-          <li class="mx-2"><a href="/about">About</a></li>
-          <li class="mx-2"><a href="/contact">Contact</a></li> 
-          <li class="mx-2"><a href="/credo">Artigos de Fé</a></li> 
-        </ul>
-      </nav>
-    </header>
+    <%= render 'layouts/site/header' %>
     
     <main class="container mx-auto mt-6 md:mt-24 flex min-h-[70vh]">
       <%= yield %>
     </main>
 
-      <%= render 'layouts/site/footer' %>
-
+    <%= render 'layouts/site/footer' %>
   </body>
 </html>

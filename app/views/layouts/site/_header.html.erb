@@ -1,0 +1,22 @@
+<header  data-controller="sticky" class="text-primary">
+  <nav id="menubar" 
+        class="px-6 bg-white mx-auto flex justify-between items-center"
+        data-sticky-target="menu">
+    <%# Logo for mobile %>
+    <%= link_to root_path, class:"contents" do %>
+      <%= image_tag 'logo-circular-sem-fundo.png', alt: 'IPRU Logo', class: 'w-1/5 lg:hidden' %>
+    <% end %>
+
+    <%# logo for larger screens %>
+    <%= link_to root_path, class:"contents" do %>
+      <%= image_tag 'logo-secundaria-sem-fundo.png', alt: 'IPRU Logo', class: 'w-1/5 hidden lg:block' %>
+    <% end %>
+
+
+    <ul class="font-bold flex space-x-6">
+      <li class="mx-2"><a href="/about">About</a></li>
+      <li class="mx-2"><a href="/contact">Contact</a></li> 
+      <li class="mx-2"><a href="/credo">Artigos de Fé</a></li> 
+    </ul>
+  </nav>
+</header>
