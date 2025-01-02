@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   end
   namespace :site do
     get 'credo/index'
-    get 'contact/index'
     get 'home/index'
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -17,6 +16,5 @@ Rails.application.routes.draw do
   root "site/home#index"
 
   get '/about', to: 'site/about#index' 
-  get '/contact', to: 'site/contact#index' 
   get '/credo', to: 'site/credo#index' 
 end
